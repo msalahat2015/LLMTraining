@@ -25,11 +25,11 @@ def save_dataset(dataset, output_path, n):
     """
 
     # Open the system prompt file and read its content
-    with open('/content/drive/MyDrive/LLMTraining-main/src/blm/prompts/system_prompt.txt', 'r') as file:
+    with open('/src/blm/prompts/system_prompt.txt', 'r') as file:
         system_prompt = file.read()
 
     # Open the system prompt file and read its content
-    with open('/content/drive/MyDrive/LLMTraining-main/src/blm/prompts/user_prompt.txt', 'r') as file:
+    with open('/src/blm/prompts/user_prompt.txt', 'r') as file:
         user_prompt = file.read()
 
     train_messages = [
@@ -85,9 +85,9 @@ def main(args):
     dataset = load_dataset(
     "csv", 
     data_files={
-        "train": "/content/drive/MyDrive/LLMTraining-main/data/task1_train.csv", 
-        "test": "/content/drive/MyDrive/LLMTraining-main/data/task1_test.csv", 
-        "validation": "/content/drive/MyDrive/LLMTraining-main/data/task1_validation.csv"
+        "train": "/data/task1_train.csv", 
+        "test": "/data/task1_test.csv", 
+        "validation": "/data/task1_validation.csv"
     }
     )
     
